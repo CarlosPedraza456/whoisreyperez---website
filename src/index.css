@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-light: #FCE689;
+    --gold-med: #ECC557;
+    --gold-dark: #EFAF50;
+    --navy-dark: #08162F;
+    --silver-med: #4D4D4D;
+  }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+
+  h1, h2, h3, .font-heading, .font-bebas {
+    font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .font-airstrike {
+    font-family: 'Bebas Neue', 'Syne', sans-serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .font-haettenschweiler {
+    font-family: 'Bebas Neue', 'Barlow Condensed', 'Anton', sans-serif;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+/* Metallic & Gold Gradient Effects */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #FCE689 0%, #ECC557 50%, #EFAF50 100%);
+}
+
+.bg-gold-gradient-hover:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FCE689 30%, #ECC557 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF6D0 0%, #ECC557 50%, #EFAF50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-silver-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #D4D4D8 40%, #9CA3AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-glow {
+  border: 1px solid rgba(236, 197, 87, 0.4);
+  box-shadow: 0 0 15px rgba(236, 197, 87, 0.15), inset 0 0 15px rgba(236, 197, 87, 0.05);
+}
+
+.border-gold-glow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.border-gold-glow-hover:hover {
+  border-color: rgba(236, 197, 87, 0.9);
+  box-shadow: 0 10px 30px -5px rgba(236, 197, 87, 0.3), inset 0 0 20px rgba(236, 197, 87, 0.1);
+  transform: translateY(-6px);
+}
+
+/* Background animated mesh and keyframes */
+@keyframes background-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-bg-shift {
+  background-size: 200% 200%;
+  animation: background-shift 14s ease infinite;
+}
+
+@keyframes flare-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.12);
+  }
+}
+
+.animate-flare-pulse {
+  animation: flare-pulse 7s ease-in-out infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 30s linear infinite;
+}
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Glassmorphism Dark Card */
+.glass-card {
+  background: rgba(8, 22, 47, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(236, 197, 87, 0.22);
+}
+
+.glass-card-dark {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(236, 197, 87, 0.18);
+}
+
