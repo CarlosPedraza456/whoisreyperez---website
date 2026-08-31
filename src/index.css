@@ -7,12 +7,22 @@
     --gold-dark: #EFAF50;
     --navy-dark: #08162F;
     --silver-med: #4D4D4D;
+    font-size: 17.5px;
+  }
+
+  html {
+    font-size: 17.5px;
+    letter-spacing: 0.01em;
   }
 
   body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #000000;
     color: #FFFFFF;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, .font-heading, .font-bebas {

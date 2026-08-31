@@ -31,7 +31,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
               <Sparkles className="w-3 h-3 text-[#ECC557]" />
               {tag}
             </div>
-            <h3 className="text-xl font-bold text-white font-heading">{title}</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white font-heading">{title}</h3>
             {subtitle && <p className="text-sm text-zinc-400">{subtitle}</p>}
           </div>
 

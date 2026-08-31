@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Heart, Sparkles, Code2, Globe, Shield, ArrowUp } from 'lucide-react';
+import { ReyLogo } from './ReyLogo';
 
 interface FooterProps {
   onOpenGHLDrawer: () => void;
@@ -11,10 +12,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGHLDrawer }) => {
   };
 
   return (
-    <footer className="relative bg-[#000000] border-t border-[rgba(236,197,87,0.3)] pt-16 pb-12 overflow-hidden text-zinc-400 text-xs">
+    <footer className="relative bg-[#000000] border-t border-zinc-900 pt-16 pb-12 overflow-hidden text-zinc-300 text-sm">
       
       {/* Background Subtle Flare */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-48 bg-[#08162F]/60 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-48 bg-[#08162F]/40 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
@@ -23,59 +24,52 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGHLDrawer }) => {
           
           {/* Col 1 & 2: Brand Identity */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#08162F] to-[#000000] border border-[#ECC557]/60 flex items-center justify-center shadow-[0_0_15px_rgba(236,197,87,0.3)]">
-                <span className="text-lg font-bold font-airstrike text-gold-gradient">RP</span>
-              </div>
-              <div>
-                <span className="text-xl font-bold font-airstrike tracking-wider text-white">
-                  REY PEREZ
-                </span>
-                <span className="block text-[10px] uppercase font-bold tracking-widest text-[#ECC557] font-mono">
-                  #1 Global Branding Expert
-                </span>
-              </div>
-            </div>
+            <ReyLogo size="md" />
 
-            <p className="text-xs text-zinc-300 font-light leading-relaxed max-w-sm">
+            <p className="text-sm sm:text-base text-zinc-200 font-normal leading-relaxed max-w-sm">
               Empowering visionary entrepreneurs, corporate executives, and speakers to transform personal identity into category monopolies and monetize stages with surgical precision.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
               <button
                 onClick={onOpenGHLDrawer}
-                className="px-3.5 py-1.5 rounded-lg bg-[#08162F] border border-[#ECC557]/40 text-[#FCE689] text-[11px] font-mono font-bold flex items-center gap-1.5 hover:bg-[#08162F]/80 transition-colors"
+                className="px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-700 text-[#FCE689] text-xs sm:text-sm font-mono font-bold flex items-center gap-2 hover:bg-zinc-800 hover:border-[#ECC557] transition-all cursor-pointer"
               >
-                <Code2 className="w-3.5 h-3.5 text-[#ECC557]" />
-                <span>GHL Layout Blueprint & CSS</span>
+                <Code2 className="w-4 h-4 text-[#ECC557]" />
+                <span>GHL Layout Blueprint &amp; CSS</span>
               </button>
             </div>
           </div>
 
           {/* Col 3: Programs & Keynotes */}
           <div className="space-y-3">
-            <h4 className="text-xs uppercase font-mono font-bold text-white tracking-widest">
-              Programs & Events
+            <h4 className="text-sm uppercase font-mono font-bold text-white tracking-widest">
+              Consulting &amp; Training
             </h4>
-            <ul className="space-y-2 text-xs">
+            <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#sec-bgb" className="hover:text-[#ECC557] transition-colors">
-                  Business Growth Bootcamp (BGB)
+                <a href="#sec-work-with-rey" className="hover:text-[#ECC557] transition-colors">
+                  Business Strategy Session (40 min)
                 </a>
               </li>
               <li>
-                <a href="#sec-ssm" className="hover:text-[#ECC557] transition-colors">
-                  Speaking & Sales Mastery (SSM)
+                <a href="#sec-work-with-rey" className="hover:text-[#ECC557] transition-colors">
+                  Personal Brand Strategy (90 min)
                 </a>
               </li>
               <li>
-                <a href="#sec-keynotes" className="hover:text-[#ECC557] transition-colors">
-                  Signature Keynote Speeches
+                <a href="#sec-work-with-rey" className="hover:text-[#ECC557] transition-colors">
+                  Powerhour with Rey Perez (2 hrs)
                 </a>
               </li>
               <li>
-                <a href="#sec-work-expert" className="hover:text-[#ECC557] transition-colors">
-                  Private 1-on-1 Branding Advisory
+                <a href="#sec-work-with-rey" className="hover:text-[#ECC557] transition-colors">
+                  Group Consulting &amp; Mastermind
+                </a>
+              </li>
+              <li>
+                <a href="#sec-work-with-rey" className="hover:text-[#ECC557] transition-colors">
+                  Master-Planning Powerday
                 </a>
               </li>
             </ul>
@@ -83,13 +77,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGHLDrawer }) => {
 
           {/* Col 4: Philanthropy & Impact */}
           <div className="space-y-3">
-            <h4 className="text-xs uppercase font-mono font-bold text-white tracking-widest">
-              Impact & Media
+            <h4 className="text-sm uppercase font-mono font-bold text-white tracking-widest">
+              Impact &amp; Media
             </h4>
-            <ul className="space-y-2 text-xs">
+            <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#sec-influence-love" className="hover:text-[#ECC557] transition-colors flex items-center gap-1">
-                  <Heart className="w-3 h-3 text-[#ECC557]" />
+                <a href="#sec-ssm-showcase" className="hover:text-[#ECC557] transition-colors">
+                  Speaking &amp; Sales Mastery Camp
+                </a>
+              </li>
+              <li>
+                <a href="#sec-influence-love" className="hover:text-[#ECC557] transition-colors flex items-center gap-1.5">
+                  <Heart className="w-3.5 h-3.5 text-[#ECC557]" />
                   <span>Influence With Love Foundation</span>
                 </a>
               </li>
@@ -103,41 +102,30 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGHLDrawer }) => {
                   Purpose Driven Entrepreneur
                 </a>
               </li>
-              <li>
-                <a href="#sec-booking" className="hover:text-[#ECC557] transition-colors">
-                  Press & Media Kit Inquiries
-                </a>
-              </li>
             </ul>
           </div>
 
           {/* Col 5: Direct Booking Office */}
           <div className="space-y-3">
-            <h4 className="text-xs uppercase font-mono font-bold text-white tracking-widest">
-              Booking Office
+            <h4 className="text-sm uppercase font-mono font-bold text-white tracking-widest">
+              Executive Office
             </h4>
-            <div className="space-y-2 text-xs">
-              <p className="text-zinc-300">
-                <span className="text-[#ECC557] font-semibold">VIP Relations:</span><br />
+            <div className="space-y-2.5 text-sm">
+              <p className="text-zinc-200">
+                <span className="text-[#ECC557] font-bold">VIP Relations:</span><br />
                 booking@whoisreyperez.com
               </p>
-              <p className="text-zinc-300">
-                <span className="text-[#ECC557] font-semibold">Global Office:</span><br />
+              <p className="text-zinc-200">
+                <span className="text-[#ECC557] font-bold">Global Office:</span><br />
                 Miami, Florida • USA
               </p>
-              <a
-                href="#sec-booking"
-                className="inline-block px-3.5 py-1.5 rounded-lg bg-gold-gradient text-black font-bold uppercase text-[10px] tracking-wider mt-1"
-              >
-                Schedule VIP Call
-              </a>
             </div>
           </div>
 
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-zinc-500">
+        <div className="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-mono text-zinc-400">
           <p>
             © {new Date().getFullYear()} Rey Perez International. All Rights Reserved. Powered by GoHighLevel (GHL).
           </p>
@@ -145,10 +133,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGHLDrawer }) => {
           <div className="flex items-center gap-4">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1 text-[#FCE689] hover:underline"
+              className="flex items-center gap-1.5 text-[#FCE689] hover:underline font-bold cursor-pointer"
             >
               <span>Back to Top</span>
-              <ArrowUp className="w-3 h-3" />
+              <ArrowUp className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>

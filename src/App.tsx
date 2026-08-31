@@ -2,20 +2,24 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { SocialProofSection } from './components/SocialProofSection';
-import { EcosystemSection } from './components/EcosystemSection';
 import { WorkWithExpertSection } from './components/WorkWithExpertSection';
-import { KeynotesSection } from './components/KeynotesSection';
-import { BGBSection } from './components/BGBSection';
-import { SSMSection } from './components/SSMSection';
+import { WorkWithReyTiersSection } from './components/WorkWithReyTiersSection';
+import { OurValuesSection } from './components/OurValuesSection';
+import { MeetTheTeamSection } from './components/MeetTheTeamSection';
+import { MasterBusinessEcosystemSection } from './components/MasterBusinessEcosystemSection';
+import { NewsletterSection } from './components/NewsletterSection';
+import { SpeakingSalesMasteryBannerSection } from './components/SpeakingSalesMasteryBannerSection';
+import { BootcampBannerSection } from './components/BootcampBannerSection';
+import { BooksShowcaseSection } from './components/BooksShowcaseSection';
+import { PodcastInterviewsSection } from './components/PodcastInterviewsSection';
 import { InfluenceWithLoveSection } from './components/InfluenceWithLoveSection';
+import { PurposeDrivenSection } from './components/PurposeDrivenSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
-import { BookingContactSection } from './components/BookingContactSection';
 import { Footer } from './components/Footer';
 import { GHLBlueprintDrawer } from './components/GHLBlueprintDrawer';
 import { VideoModal } from './components/VideoModal';
 import { BookingModal } from './components/BookingModal';
-import { Keynote } from './types';
-import { Code2, Sparkles, Layers } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 
 export default function App() {
   const [isGHLDrawerOpen, setIsGHLDrawerOpen] = useState(false);
@@ -44,8 +48,8 @@ export default function App() {
     });
   };
 
-  const handleSelectKeynote = (keynote: Keynote) => {
-    setSelectedKeynoteName(keynote.title);
+  const handleSelectTier = (tierTitle: string) => {
+    setSelectedKeynoteName(tierTitle);
     setIsBookingModalOpen(true);
   };
 
@@ -81,13 +85,13 @@ export default function App() {
         }}
       />
 
-      {/* Main Website Flow */}
+      {/* Main Website Flow (Dan Martell Balance & High Impact) */}
       <main className="flex-1">
         
         {/* Section 1: Hero Section */}
         <HeroSection
           onOpenBooking={() => {
-            setSelectedKeynoteName('The Million Dollar Brand Blueprint');
+            setSelectedKeynoteName('The Million Dollar Brand Blueprint Keynote');
             setIsBookingModalOpen(true);
           }}
           onOpenVideo={handleOpenVideo}
@@ -99,65 +103,79 @@ export default function App() {
           showPlaceholdersOnly={showPlaceholdersOnly}
         />
 
-        {/* Section 3: WORK WITH THE #1 GLOBAL BRANDING EXPERT (STRICT STRUCTURAL REPLICA) */}
+        {/* Section 3: WHO IS REY PEREZ (Authority & Credibility - Clean Text Only) */}
         <WorkWithExpertSection
           onOpenBooking={() => {
-            setSelectedKeynoteName('Private Advisory & Partnership');
+            setSelectedKeynoteName('Executive Advisory & Mentorship');
             setIsBookingModalOpen(true);
           }}
           showPlaceholdersOnly={showPlaceholdersOnly}
         />
 
-        {/* Section 4: The 360 Authority Ecosystem (AMP Your Brand, My360Sites, Today's Premier Experts TV) */}
-        <EcosystemSection
-          onOpenBooking={(brand) => {
-            setSelectedKeynoteName(`${brand} Inquiry`);
-            setIsBookingModalOpen(true);
-          }}
-          onOpenVideo={handleOpenVideo}
+        {/* Section 4: WORK WITH REY (5 Consulting Tiers) */}
+        <WorkWithReyTiersSection
+          onSelectTier={handleSelectTier}
           showPlaceholdersOnly={showPlaceholdersOnly}
         />
 
-        {/* Section 5: Keynotes & Experiences */}
-        <KeynotesSection
-          onSelectKeynote={handleSelectKeynote}
+        {/* Section 4.5: OUR CORE VALUES (Mission & Vision Statements) */}
+        <OurValuesSection
           showPlaceholdersOnly={showPlaceholdersOnly}
         />
 
-        {/* Section 5: The Business Growth Bootcamp (BGB) - MASSIVE REDESIGN */}
-        <BGBSection
-          onOpenVideo={handleOpenVideo}
+        {/* Section 4.55: MEET THE TEAM (Executive Specialists & Leadership) */}
+        <MeetTheTeamSection />
+
+        {/* Section 4.6: MASTER EVERY AREA OF YOUR BUSINESS (12-Pillar Ecosystem Grid) */}
+        <MasterBusinessEcosystemSection />
+
+        {/* Section 4.7: NEWSLETTER & AUTHORITY PLAYBOOK (Dan Martell Split Style) */}
+        <NewsletterSection
+          showPlaceholdersOnly={showPlaceholdersOnly}
+        />
+
+        {/* Section 5: Speaking & Sales Mastery (SSM) - Left-Oriented Crest */}
+        <SpeakingSalesMasteryBannerSection
           onOpenBooking={() => {
-            setSelectedKeynoteName('Business Growth Bootcamp (BGB) Enrollment');
+            setSelectedKeynoteName('Speaking & Sales Mastery 3-Day LIVE Camp');
             setIsBookingModalOpen(true);
           }}
+          onOpenVideo={handleOpenVideo}
           showPlaceholdersOnly={showPlaceholdersOnly}
         />
 
-        {/* Section 6: Speaking & Sales Mastery (SSM) - MASSIVE REDESIGN */}
-        <SSMSection
-          onOpenVideo={handleOpenVideo}
+        {/* Section 6: Business Growth Bootcamp (BGB) - Right-Oriented Crest */}
+        <BootcampBannerSection
           onOpenBooking={() => {
-            setSelectedKeynoteName('Speaking & Sales Mastery (SSM) VIP Seat');
+            setSelectedKeynoteName('Business Growth Bootcamp (BGB) Cohort');
             setIsBookingModalOpen(true);
           }}
-          showPlaceholdersOnly={showPlaceholdersOnly}
-        />
-
-        {/* Section 7: THANK YOU FOR YOUR GIVING / INFLUENCE WITH LOVE (STRICT STRUCTURAL REPLICA) */}
-        <InfluenceWithLoveSection
           onOpenVideo={handleOpenVideo}
           showPlaceholdersOnly={showPlaceholdersOnly}
         />
 
-        {/* Section 8: Experiencia y Testimonios */}
+        {/* Section 6.5: BEST-SELLING BOOKS SHOWCASE (Dan Martell 3D Book Slider) */}
+        <BooksShowcaseSection
+          showPlaceholdersOnly={showPlaceholdersOnly}
+        />
+
+        {/* Section 6.8: PODCAST INTERVIEWS (Media & Authority Appearances) */}
+        <PodcastInterviewsSection />
+
+        {/* Section 7: Endorsements & VIP Testimonials */}
         <TestimonialsSection
           onOpenVideo={handleOpenVideo}
           showPlaceholdersOnly={showPlaceholdersOnly}
         />
 
-        {/* Section 9: Contacto & GoHighLevel Interactive Booking */}
-        <BookingContactSection />
+        {/* Section 8: INFLUENCE WITH LOVE (Philanthropy & Giving Movement) */}
+        <InfluenceWithLoveSection
+          onOpenVideo={handleOpenVideo}
+          showPlaceholdersOnly={showPlaceholdersOnly}
+        />
+
+        {/* Section 8.5: Work With The #1 Global Branding Expert & Specialist Team (Purpose Driven Giving) */}
+        <PurposeDrivenSection />
 
       </main>
 
@@ -179,7 +197,7 @@ export default function App() {
         }}
       />
 
-      {/* Keynote / VIP Direct Booking Modal */}
+      {/* Keynote / VIP Direct Booking Modal (Pop-up management) */}
       <BookingModal
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
