@@ -12,6 +12,7 @@ import { SpeakingSalesMasteryBannerSection } from './components/SpeakingSalesMas
 import { BootcampBannerSection } from './components/BootcampBannerSection';
 import { BooksShowcaseSection } from './components/BooksShowcaseSection';
 import { PodcastInterviewsSection } from './components/PodcastInterviewsSection';
+import { FullWidthGallerySection } from './components/FullWidthGallerySection';
 import { InfluenceWithLoveSection } from './components/InfluenceWithLoveSection';
 import { PurposeDrivenSection } from './components/PurposeDrivenSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
@@ -161,6 +162,9 @@ export default function App() {
 
         {/* Section 6.8: PODCAST INTERVIEWS (Media & Authority Appearances) */}
         <PodcastInterviewsSection />
+
+        {/* Section 6.9: FULL-WIDTH MEDIA & STAGE GALLERY (Exclusive Archive) */}
+        <FullWidthGallerySection />
 
         {/* Section 7: Endorsements & VIP Testimonials */}
         <TestimonialsSection

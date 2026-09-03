@@ -21,6 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { label: 'Speaker Camp', href: '#sec-ssm-showcase' },
     { label: 'Bootcamp', href: '#sec-bgb-showcase' },
     { label: 'Books', href: '#sec-books' },
+    { label: 'Gallery', href: '#gallery' },
     { label: 'Influence With Love', href: '#sec-influence-love' },
     { label: 'Endorsements', href: '#sec-testimonials' }
   ];
