@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { SocialProofSection } from './components/SocialProofSection';
 import { WorkWithExpertSection } from './components/WorkWithExpertSection';
+import { AboutReyVideosSection } from './components/AboutReyVideosSection';
 import { WorkWithReyTiersSection } from './components/WorkWithReyTiersSection';
 import { OurValuesSection } from './components/OurValuesSection';
 import { MeetTheTeamSection } from './components/MeetTheTeamSection';
@@ -111,6 +112,11 @@ export default function App() {
             setIsBookingModalOpen(true);
           }}
           showPlaceholdersOnly={showPlaceholdersOnly}
+        />
+
+        {/* Section 3.5: WATCH REY IN ACTION (Video Grid Section) */}
+        <AboutReyVideosSection
+          onOpenVideo={handleOpenVideo}
         />
 
         {/* Section 4: WORK WITH REY (5 Consulting Tiers) */}
